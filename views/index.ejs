@@ -35,7 +35,6 @@
             <th width="100">Product Image</th>
             <th width="50">Quantity</th>
             <th width="50">Price</th>
-            <th width="50">Edit</th>
             <th width="50">Delete</th>
           </tr>
       </thead>
@@ -46,8 +45,6 @@
             <td><img src = "/images/<%= products[i].image %>" width="20%"></td>
             <td><%= products[i].quantity %></td>
             <td>$<%= products[i].price.toFixed(2) %></td>
-            <!-- Edit Link -->
-            <td><a href="/editProduct/<%= products[i].productId %>">Edit</a></td>
             <!-- Delete Link -->
             <td><a href="/deleteProduct/<%= products[i].productId %>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a></td>
           </tr>
